@@ -14,45 +14,46 @@
       <script src="app.js" defer></script>
    </head>
    <body>
-      <form class="input-group my-3 timer-form">
-         <input type="time" placeholder="Įveskite laiką" class="form-control" />
-         <button class="btn btn-primary">Nustatyti</button>
-      </form>
-      <div class="timer" onclick="report()">
-         <div class="timer-wrap hide">
-            <span class="span-left" data-minutes></span>
-            <span data-seconds></span>
-         </div>
-         <form class="input-time" onsubmit="setTime(event)">
-            <div class="input-wrap">
-               <div class="min">
-                  <input
-                     data-minutes
-                     type="number"
-                     placeholder="0"
-                     min="0"
-                     max="60"
-                     oninput="keepZero(event)"
-                  />m
-               </div>
-               <div class="sec">
-                  <input
-                     data-seconds=""
-                     type="number"
-                     placeholder="00"
-                     min="0"
-                     max="60"
-                     autofocus
-                     required
-                     oninput="keepZero(event)"
-                  />s
-               </div>
+      <div class="main-wrap">
+         <div class="timer" onclick="report()">
+            <div class="timer-wrap hide">
+               <span class="span-left" data-minutes></span>
+               <span data-seconds></span>
             </div>
-            <button class="btn btn-primary">Start</button>
-         </form>
-      </div>
-      <div class="my-3 d-flex justify-content-center">
-         <button class="btn btn-secondary" onclick="clearTimer()">Reset</button>
+            <form class="input-time" onsubmit="setTime(event)">
+               <div class="input-wrap">
+                  <div class="inputs">
+                     <div class="min">
+                        <input
+                           class="minutes"
+                           type="number"
+                           placeholder="0"
+                           min="0"
+                           max="60"
+                        />m
+                     </div>
+                     <!-- oninput="keepZero(event)" -->
+                     <div class="sec">
+                        <input
+                           class="seconds"
+                           type="number"
+                           placeholder="00"
+                           min="0"
+                           max="60"
+                           autofocus
+                           required
+                        />s
+                     </div>
+                  </div>
+                  <button class="btn btn-success">Start</button>
+               </div>
+            </form>
+            <!-- <div class="my-3 d-flex justify-content-center"> -->
+            <button class="btn btn-primary hide" onclick="clearTimer(event)">
+               Reset
+            </button>
+            <!-- </div> -->
+         </div>
       </div>
    </body>
 </html>
