@@ -25,14 +25,26 @@
          </div>
          <form class="input-time" onsubmit="setTime(event)">
             <div class="border-wrap">
-               <input data-minutes type="number" placeholder="00" min="0" />m
-               <input
-                  data-seconds=""
-                  type="number"
-                  placeholder="00"
-                  min="0"
-                  autofocus
-               />s
+               <div class="min">
+                  <input
+                     data-minutes
+                     type="number"
+                     placeholder="00"
+                     min="0"
+                     max="60"
+                  />m
+               </div>
+               <div class="sec">
+                  <input
+                     data-seconds=""
+                     type="number"
+                     placeholder="00"
+                     min="0"
+                     max="60"
+                     autofocus
+                     oninput="keepZero(event)"
+                  />s
+               </div>
             </div>
             <button class="btn btn-primary">Start</button>
          </form>

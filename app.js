@@ -13,6 +13,16 @@ const forwardData = () => {
    secondsData.textContent = seconds < 10 ? "0" + seconds : seconds;
 };
 
+// keep zero ant input front
+const keepZero = (e) => {
+   // takes value from input
+   let value = e.target.value;
+   //    checks if number is lower then 10, then keeps 0 at front
+   value = parseInt(value) < 10 ? "0" + parseInt(value) : parseInt(value);
+   //    passes value back to input
+   e.target.value = value;
+};
+
 const createTimer = () => {
    interval = setInterval(() => {
       if (minutes === 0 && seconds === 0) return clearInterval(interval);
