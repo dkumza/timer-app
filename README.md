@@ -1,5 +1,5 @@
 # timer-app
 
-simple Stopwatch app to play around with: <br>
+simple Timer app to play around with: <br>
 - setInterval()
 - clearInterval()
