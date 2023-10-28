@@ -16,8 +16,9 @@
    align-items: center;
    background: rgb(255, 255, 255);
    border-radius: 50%;
-   border: 3px solid rgb(177, 177, 177);
+
    padding: 2rem;
+   padding-top: 50px;
    text-align: center;
    margin: 0 auto;
    font-size: 30px;
@@ -89,10 +90,15 @@ input[type="number"] {
 }
 
 .btn {
-   margin-top: 20px;
+   margin-top: 40px;
    width: 120px;
    box-shadow: 0 8px 10px -4px rgba(131, 131, 131, 0.507);
 }
+
+/* .d-flex {
+   gap: 15px;
+} */
+
 .hide {
    display: none;
 }

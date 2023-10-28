@@ -4,13 +4,11 @@ const timerWrap = document.querySelector(".timer-wrap");
 const inputWrap = document.querySelector(".input-wrap");
 const startBtn = document.querySelector(".btn-success");
 const resetBtn = document.querySelector(".btn-primary");
+const pauseBtn = document.querySelector(".btn-warning");
 
 let minutes = 0;
 let seconds = 0;
 let interval;
-const report = () => {
-   console.log("report function");
-};
 
 const forwardData = () => {
    minutesData.textContent = minutes;
@@ -59,8 +57,8 @@ const setTime = (e) => {
    //    hide start button
    startBtn.classList.add("hide");
    resetBtn.classList.remove("hide");
+   pauseBtn.classList.remove("hide");
 
-   console.log(secondsData.value);
    //Elemento filtravimas formos viduje
    // e.target.querySelector('input[type="time"]')
    minutes = +e.target[0].value;
@@ -81,6 +79,7 @@ const clearTimer = () => {
 
    startBtn.classList.remove("hide");
    resetBtn.classList.add("hide");
+   pauseBtn.classList.add("hide");
 };
 forwardData();
 createTimer();
