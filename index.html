@@ -20,18 +20,19 @@
       </form>
       <div class="timer" onclick="report()">
          <div class="timer-wrap hide">
-            <span data-minutes></span>
+            <span class="span-left" data-minutes></span>
             <span data-seconds></span>
          </div>
          <form class="input-time" onsubmit="setTime(event)">
-            <div class="border-wrap">
+            <div class="input-wrap">
                <div class="min">
                   <input
                      data-minutes
                      type="number"
-                     placeholder="00"
+                     placeholder="0"
                      min="0"
                      max="60"
+                     oninput="keepZero(event)"
                   />m
                </div>
                <div class="sec">
@@ -42,6 +43,7 @@
                      min="0"
                      max="60"
                      autofocus
+                     required
                      oninput="keepZero(event)"
                   />s
                </div>

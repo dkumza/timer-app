@@ -1,5 +1,7 @@
 const minutesData = document.querySelector("[data-minutes]");
 const secondsData = document.querySelector("[data-seconds]");
+const timerWrap = document.querySelector(".timer-wrap");
+const inputWrap = document.querySelector(".input-wrap");
 
 let minutes = 0;
 let seconds = 0;
@@ -15,8 +17,13 @@ const forwardData = () => {
 
 // keep zero ant input front
 const keepZero = (e) => {
+   let maxChars = 3;
    // takes value from input
    let value = e.target.value;
+   // checks for max characters input and prevents to be more then 2 symbols
+   if (value >= maxChars) {
+      value = value.substring(1, maxChars);
+   }
    //    checks if number is lower then 10, then keeps 0 at front
    value = parseInt(value) < 10 ? "0" + parseInt(value) : parseInt(value);
    //    passes value back to input
@@ -40,7 +47,10 @@ const createTimer = () => {
 
 const setTime = (e) => {
    e.preventDefault();
-   //    console.log(e.target[1].value);
+   timerWrap.classList.remove("hide");
+   inputWrap.classList.add("hide");
+
+   // console.log(e.target[1].value);
    //Elemento filtravimas formos viduje
    // e.target.querySelector('input[type="time"]')
    let minutes = e.target[0].value;
