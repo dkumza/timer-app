@@ -16,23 +16,23 @@ const forwardData = () => {
 };
 
 // keep zero ant input front
-// const keepZero = (e) => {
-//    let maxChars = 2;
-//    // takes value from input
-//    let value = e.target.value;
-//    console.log(parseInt(value));
-//    console.log(typeof value);
-//    // checks for max characters input and prevents to be more then 2 symbols
-//    if (value >= maxChars) {
-//       value = parseInt(value.substring(1, maxChars));
-//    }
+const keepZero = (e) => {
+   let maxChars = 3;
+   // takes value from input
+   let value = e.target.value;
+   console.log(parseInt(value));
+   console.log(typeof value);
+   // checks for max characters input and prevents to be more then 2 symbols
+   if (value >= maxChars) {
+      value = parseInt(value.substring(1, maxChars));
+   }
 
-//    //    checks if number is lower then 10, then keeps 0 at front
-//    value = parseInt(value) < 10 ? "0" + parseInt(value) : parseInt(value);
+   //    checks if number is lower then 10, then keeps 0 at front
+   value = parseInt(value) < 10 ? "0" + parseInt(value) : parseInt(value);
 
-//    //    passes value back to input
-//    e.target.value = value;
-// };
+   //    passes value back to input
+   e.target.value = value;
+};
 
 const createTimer = () => {
    interval = setInterval(() => {
@@ -82,7 +82,7 @@ const clearTimer = () => {
    //    pauseBtn.classList.add("hide");
 };
 forwardData();
-createTimer();
+// createTimer();
 
 // pauseBtn.addEventListener("click", () => {
 //    clearInterval(interval);

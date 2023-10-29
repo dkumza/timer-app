@@ -46,8 +46,8 @@ input:focus {
    justify-content: center;
    align-items: center;
    text-align: center;
-   gap: 13px;
-   padding-left: 13px;
+   gap: 12px;
+   padding-left: 32px;
    border-bottom: 1px solid black;
    width: 200px;
 }
@@ -94,10 +94,6 @@ input[type="number"] {
    width: 120px;
    box-shadow: 0 8px 10px -4px rgba(131, 131, 131, 0.507);
 }
-
-/* .d-flex {
-   gap: 15px;
-} */
 
 .hide {
    display: none;

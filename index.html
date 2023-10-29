@@ -17,8 +17,14 @@
       <div class="main-wrap">
          <div class="timer shadow">
             <div class="timer-wrap hide">
-               <span class="span-left" data-minutes></span>
-               <span data-seconds></span>
+               <div class="span1">
+
+                  <span class="span-left" data-minutes></span>
+               </div>
+               <div class="span2">
+
+                  <span data-seconds></span>
+               </div>
             </div>
             <form class="input-time" onsubmit="setTime(event)">
                <div class="input-wrap">
@@ -30,9 +36,9 @@
                            placeholder="0"
                            min="0"
                            max="60"
+                           oninput="keepZero(event)"
                         />m
                      </div>
-                     <!-- oninput="keepZero(event)" -->
                      <div class="sec">
                         <input
                            class="seconds"
@@ -41,7 +47,7 @@
                            min="0"
                            max="60"
                            autofocus
-                           required
+                           oninput="keepZero(event)"
                         />s
                      </div>
                   </div>
