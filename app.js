@@ -82,7 +82,7 @@ const clearTimer = () => {
    //    pauseBtn.classList.add("hide");
 };
 forwardData();
-// createTimer();
+createTimer();
 
 // pauseBtn.addEventListener("click", () => {
 //    clearInterval(interval);
